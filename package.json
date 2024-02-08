@@ -1,6 +1,7 @@
 {
   "private": true,
   "packageManager": "pnpm@8.2.0",
+  "homepage": "https://mk3mk.github.io/Next-app-playground",
   "scripts": {
     "build": "next build",
     "dev": "next dev",
@@ -9,7 +10,9 @@
     "prettier": "prettier --write --ignore-unknown .",
     "prettier:check": "prettier --check --ignore-unknown .",
     "start": "next start",
-    "test": "yarn prettier:check && yarn lint"
+    "test": "yarn prettier:check && yarn lint",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "git": {
     "pre-commit": "lint-staged"
@@ -42,6 +45,7 @@
     "autoprefixer": "10.4.13",
     "eslint": "8.30.0",
     "eslint-config-next": "13.1.0",
+    "gh-pages": "6.1.1",
     "lint-staged": "13.1.0",
     "postcss": "8.4.20",
     "prettier": "2.8.1",
